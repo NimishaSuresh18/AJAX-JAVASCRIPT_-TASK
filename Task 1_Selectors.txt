@@ -1,0 +1,60 @@
+01.10 2:11 PM
+Task 1- Types of Selectors
+Types of Selectors:
+1.getElementById() :
+(A)It is selected based on ID's.
+(B)It returns only the first matched element and single element.
+(C)It returns null if element does not exist.
+
+2.getElementsByClassName() :
+(A)It returns all the specified elements that match the specified class name.
+(B)It returns a live HTMLCollection[A HTMLCollection is an array-like Collections (list)] if the element does not exist.
+(C)The elements in collection can be accessed by index.
+(D) Here, Length property- returns number of elements in collection.
+
+3.getElementsByName() :
+(A)It returns all the specified elements that match the specified  name.
+(B)It returns a live NodeList[A NodeList is an array-like Collections (list)].
+(C)The elements in collection can be accessed by index.
+(D) Here, Length property- returns number of nodes in list.
+
+4.getElementsByTagName() :
+(A) It returns a collection of all specified elements that match the specified tag name.
+(B) The elements are sorted as they appear in the document.
+
+EXAMPLE PROGRAM:
+<html>
+<body>
+<h1 id="element">AJAX TASK</h1>
+
+<div class= "elementclass">
+<button type="button" onclick="document.getElementsByClassName["elementclass"].innerHTML="Welcome">click here
+</button>
+</div>
+
+ANGULAR:
+<input name="domain" type="checkbox" value="Angular">
+DOTNET:
+<input name="domain" type="checkbox" value="Dotnet">
+
+<p>List of topics</p>
+<ul>
+<li>Filters</li>
+<li>Exceptions</li>
+<li>Authentication & Authorization</li>
+<li>Routing Attribute</li>
+</ul>
+
+<script>
+let num = document.getElementsByName("domain").length;
+document.getElementById("element").
+innerHTML . style.color="violet";
+document.getElementsByTagName("li"). innerHTML .style.font="georgia";
+</script>
+</body>
+</html>
+
+
+
+
+

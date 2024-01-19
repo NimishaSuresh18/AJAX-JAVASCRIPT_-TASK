@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    </head>   
+    <body>
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="Index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Contact.html">Contact Us</a>
+        </div>
+
+        <!-- <div class="bg">
+            <img src="C:\Users\nimisha.suresh\Downloads\image4.1.jpg" alt=""
+             style="width: 100%;">
+          </div> -->
+          <div id="about">          
+
+                <button onclick="AjaxRequest()"> Submit </button>
+                <p id="response">Welcome</p>
+            </div>
+            <script>
+              function AjaxRequest(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                  if(this.readyState==4 && this.status==200){
+                    var jsonResponse = JSON.parse(this.responseText);
+                    document.getElementById("response").innerHTML="User Id:"+jsonResponse[0].userId+"<br>Title:"
+                +jsonResponse[0].title;
+                  }
+                };
+                xhttp.open("GET","https://jsonplaceholder.typicode.com/posts",true);
+                xhttp.setRequestHeader("COntent-Type","application/json;charset=UTF-8");
+                xhttp.send();
+              }
+                
+                </script>
+        
+    </body>
